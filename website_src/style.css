@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+body{
+    overflow-x: hidden;
+
+}
+
 .page1 h1::selection,
 .page1 span::selection,
 .page1 p::selection{
@@ -21,6 +26,7 @@
     flex-direction: column;
     height: 100vh;
     background-color: #fffeef;
+    border-bottom: 1px solid #1e293b21;
 }
 
 .page1 h1{
@@ -95,6 +101,117 @@
     text-decoration: none;
 }
 
+.page2{
+    background-color: #fafbf0;
+    height: 100vh;
+    width: 100vw;
+    border-top: 1px solid #1e293b21;
+    /* padding: 20px; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.page2 h1{
+    font-size: 5vw;
+    font-family: 'Pixelify Sans', cursive;
+    color: #E37383;
+    -webkit-text-stroke: 0.5px #1e293b;
+    animation: floating 3s ease-in-out infinite
+}
+
+.page2 p{
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.page2 .top-div-2{
+    margin-top: 40px;
+    width: 100vw;
+    text-align:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 10px;
+    
+}
+
+.page2 .left-div-1{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.page2 .right-div-1{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+
+.page2 button{
+    margin-top: 5vh;
+    background: #E37383;
+    outline: 2px solid #1e293b;
+    border: none;
+    border-radius: 10px;
+    color: #fffeef;
+    font-size: 2vw;
+    font-family: 'Rokkitt', serif;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.page2 button:hover{
+    background: transparent;
+    color: #1e293b;   
+    outline: 2px solid #1e293b; 
+}
+
+.hidden-btn{
+    display: none;
+}
+
+
+.bottom-div-2{
+    display: flex;
+    height: calc(100vh - 40px);
+    width: 100vw;
+}
+
+.left-div-2{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-div-2{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }    
+}
+
+
 @media (max-width:600px) {
     .body{
         display: flex;
@@ -121,5 +238,6 @@
         font-size: 5vw;
         width: 30vw;
     }
+
 }
 
